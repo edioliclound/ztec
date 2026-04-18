@@ -207,6 +207,45 @@ ul.checked li::before { content: '✓'; position: absolute; left: 0; top: 2px; c
   .whatsapp-btn svg { width: 30px; height: 30px; }
 }
 
+/* --- MODERNIZACIÓN GLOBAL Y CORRECCIÓN DE CUADRÍCULA --- */
+body { background-color: #f4f7f9 !important; font-family: 'Open Sans', Arial, sans-serif !important; color: #444; line-height: 1.6; }
+#wrapper { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; border: none !important; box-shadow: none !important; background: transparent !important; overflow-x: hidden; }
+.container { background: transparent !important; box-shadow: none !important; border: none !important; }
+
+h1, h2, h3, h4, h5, h6 { color: #111; font-weight: 700; font-family: 'Open Sans', Arial, sans-serif !important; }
+
+/* Cuadrícula Flexbox para Productos (Fuerza disposición Horizontal en PC) */
+#featured_services_carousel { display: flex !important; flex-wrap: wrap !important; justify-content: flex-start !important; align-items: stretch !important; margin: 0 !important; padding: 0 !important; background: transparent !important; }
+.section_featured_services { background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 40px !important; }
+.carousel_arrows_bgr { display: none !important; }
+
+#featured_services_carousel > li { width: calc(25% - 20px) !important; margin: 0 10px 20px 10px !important; float: none !important; display: flex !important; flex-direction: column !important; background: #fff !important; border-radius: 12px !important; padding: 20px !important; box-shadow: 0 6px 20px rgba(0,0,0,0.05) !important; border: 1px solid rgba(0,0,0,0.03) !important; transition: all 0.3s ease !important; box-sizing: border-box !important; text-align: center !important; }
+#featured_services_carousel > li:hover { box-shadow: 0 12px 30px rgba(0,168,232,0.1) !important; transform: translateY(-5px) !important; border-color: rgba(0,168,232,0.2) !important; }
+
+/* Organizar el contenido dentro de la tarjeta */
+#featured_services_carousel > li .pic { flex-grow: 0; height: 160px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; background: transparent; }
+#featured_services_carousel > li .pic a { display: block; height: 100%; }
+#featured_services_carousel > li .pic img { max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.4s ease; border-radius: 4px; }
+#featured_services_carousel > li:hover .pic img { transform: scale(1.05); }
+#featured_services_carousel > li h4 { flex-grow: 0; min-height: 40px; display: flex; align-items: center; justify-content: center; margin: 10px 0 !important; }
+#featured_services_carousel > li h4 a { color: #222 !important; font-size: 15px !important; font-weight: 700 !important; text-decoration: none !important; line-height: 1.3; }
+#featured_services_carousel > li:hover h4 a { color: #00a8e8 !important; }
+#featured_services_carousel > li > p { margin-bottom: 15px !important; flex-grow: 0; }
+#featured_services_carousel > li .acc_holder { flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end; width: 100%; }
+
+/* Responsividad de la cuadrícula */
+@media (max-width: 960px) { #featured_services_carousel > li { width: calc(33.333% - 20px) !important; } }
+@media (max-width: 768px) { #featured_services_carousel > li { width: calc(50% - 20px) !important; } }
+@media (max-width: 480px) { #featured_services_carousel > li { width: calc(100% - 20px) !important; } }
+
+/* Botones Modernos */
+.button, .sm_button, .button_hilite { background: #00a8e8 !important; color: #fff !important; border: none !important; border-radius: 6px !important; padding: 10px 20px !important; font-weight: 700 !important; text-transform: none !important; box-shadow: 0 4px 12px rgba(0, 168, 232, 0.3) !important; transition: all 0.3s ease !important; display: inline-block; }
+.button:hover, .sm_button:hover, .button_hilite:hover { background: #0056b3 !important; box-shadow: 0 6px 16px rgba(0, 86, 179, 0.4) !important; transform: translateY(-2px) !important; }
+
+/* Acordeones Limpios (Detalles de Producto) */
+.acc_holder .acc_item { border-radius: 8px !important; border: 1px solid #eaeaea !important; box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important; margin-top: 15px !important; overflow: hidden; text-align: left; }
+.acc_holder h4.accordion { background: #f8fafd !important; border-bottom: 1px solid #eaeaea !important; padding: 10px 15px !important; margin: 0 !important; color: #333 !important; font-size: 13px !important; }
+.acc_holder .accordion_content { padding: 15px !important; font-size: 12px !important; color: #666 !important; background: #fff !important; line-height: 1.5; }
 </style>
 </head>
 <body>

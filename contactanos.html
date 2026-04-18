@@ -82,6 +82,117 @@
   #menu ul li > div::before { display: none !important; }
   #menu ul li:hover > div { display: block !important; opacity: 1; visibility: visible; }
 }
+
+/* --- MODERNIZACIÓN GLOBAL DE ESTILOS --- */
+body { color: #444; line-height: 1.6; }
+h1, h2, h3, h4, h5, h6 { color: #111; font-weight: 700; }
+
+/* Botones Modernos */
+.button, .sm_button, .button_hilite { 
+    background: #00a8e8 !important; 
+    color: #fff !important; 
+    border: none !important; 
+    border-radius: 6px !important; 
+    padding: 12px 24px !important; 
+    font-weight: 600 !important; 
+    text-transform: none !important; 
+    letter-spacing: 0.5px !important; 
+    box-shadow: 0 4px 12px rgba(0, 168, 232, 0.3) !important; 
+    transition: all 0.3s ease !important; 
+    text-shadow: none !important;
+    display: inline-block;
+}
+.button:hover, .sm_button:hover, .button_hilite:hover { 
+    background: #0056b3 !important; 
+    box-shadow: 0 6px 16px rgba(0, 86, 179, 0.4) !important; 
+    transform: translateY(-2px) !important; 
+}
+
+/* Tarjetas de Productos Modernizadas */
+#featured_services_carousel > li {
+    background: #fff !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.03) !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box !important;
+}
+#featured_services_carousel > li:hover {
+    box-shadow: 0 12px 30px rgba(0,168,232,0.1) !important;
+    transform: translateY(-5px) !important;
+}
+#featured_services_carousel > li .pic img {
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+#featured_services_carousel > li:hover .pic img {
+    transform: scale(1.05);
+}
+#featured_services_carousel > li h4 a {
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    transition: color 0.3s !important;
+    text-decoration: none !important;
+}
+#featured_services_carousel > li:hover h4 a {
+    color: #00a8e8 !important;
+}
+
+/* Migas de Pan (Breadcrumbs) Modernas */
+.breadcrumb {
+    background: transparent !important;
+    border: none !important;
+    padding: 15px 0 !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+}
+.breadcrumb a {
+    color: #00a8e8 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding: 5px 10px !important;
+    background: rgba(0, 168, 232, 0.05) !important;
+    border-radius: 4px !important;
+    transition: 0.3s !important;
+}
+.breadcrumb a:hover {
+    background: #00a8e8 !important;
+    color: #fff !important;
+}
+.breadcrumb a.last_bc {
+    color: #666 !important;
+    background: transparent !important;
+}
+
+/* Títulos de Página */
+.page_heading h1 {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #111 !important;
+    border-bottom: 4px solid #00a8e8;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+}
+
+/* Ajustes Formulario Contacto */
+.aqua_input {
+    border: 1px solid #ddd !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.02) !important;
+    transition: border 0.3s !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: inherit !important;
+}
+.aqua_input:focus {
+    border-color: #00a8e8 !important;
+    box-shadow: 0 0 8px rgba(0,168,232,0.2) !important;
+    outline: none !important;
+}
 </style>
 </head>
 <body>

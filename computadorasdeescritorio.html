@@ -82,6 +82,140 @@
   #menu ul li > div::before { display: none !important; }
   #menu ul li:hover > div { display: block !important; opacity: 1; visibility: visible; }
 }
+
+/* Modales y Carrito Yape en Navbar */
+.cart-count-nav { position: absolute; top: 0px; right: 5px; background: #e74c3c; color: #fff; border-radius: 50%; padding: 2px 6px; font-size: 11px; font-weight: bold; line-height: 1; }
+.custom-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; }
+.custom-modal-content { background: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 450px; max-height: 85vh; overflow-y: auto; position: relative; font-family: 'Open Sans', sans-serif; text-align: left; }
+.close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa; transition: 0.3s; }
+.close-modal:hover { color: #333; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding: 12px 0; }
+.cart-item-title { font-weight: 600; color: #333; display: block; font-size: 14px; }
+.cart-item-price { color: #00a8e8; font-weight: bold; }
+.cart-remove { background: #e74c3c; color: #fff; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; font-weight: bold; }
+.cart-total { font-weight: 800; text-align: right; margin-top: 20px; font-size: 20px; color: #111; }
+.btn-yape { background: #742284; color: #fff; width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; transition: 0.3s; }
+.btn-yape:hover { background: #5a1a66; }
+.btn-whatsapp { background: #25d366; }
+.btn-whatsapp:hover { background: #1ebe57; }
+.yape-qr { max-width: 220px; border: 3px solid #742284; border-radius: 15px; padding: 10px; margin: 15px 0; }
+
+/* --- MODERNIZACIÓN GLOBAL DE ESTILOS --- */
+body { color: #444; line-height: 1.6; }
+h1, h2, h3, h4, h5, h6 { color: #111; font-weight: 700; }
+
+/* Botones Modernos */
+.button, .sm_button, .button_hilite { 
+    background: #00a8e8 !important; 
+    color: #fff !important; 
+    border: none !important; 
+    border-radius: 6px !important; 
+    padding: 12px 24px !important; 
+    font-weight: 600 !important; 
+    text-transform: none !important; 
+    letter-spacing: 0.5px !important; 
+    box-shadow: 0 4px 12px rgba(0, 168, 232, 0.3) !important; 
+    transition: all 0.3s ease !important; 
+    text-shadow: none !important;
+    display: inline-block;
+}
+.button:hover, .sm_button:hover, .button_hilite:hover { 
+    background: #0056b3 !important; 
+    box-shadow: 0 6px 16px rgba(0, 86, 179, 0.4) !important; 
+    transform: translateY(-2px) !important; 
+}
+
+/* Tarjetas de Productos Modernizadas */
+#featured_services_carousel > li {
+    background: #fff !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.03) !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box !important;
+}
+#featured_services_carousel > li:hover {
+    box-shadow: 0 12px 30px rgba(0,168,232,0.1) !important;
+    transform: translateY(-5px) !important;
+}
+#featured_services_carousel > li .pic img {
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+#featured_services_carousel > li:hover .pic img {
+    transform: scale(1.05);
+}
+#featured_services_carousel > li h4 a {
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    transition: color 0.3s !important;
+    text-decoration: none !important;
+}
+#featured_services_carousel > li:hover h4 a {
+    color: #00a8e8 !important;
+}
+
+/* Acordeones Limpios (Detalles de Producto) */
+.acc_holder .acc_item {
+    border-radius: 8px !important;
+    border: 1px solid #eaeaea !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important;
+    margin-top: 15px !important;
+    overflow: hidden;
+}
+.acc_holder h4.accordion {
+    background: #f8fafd !important;
+    border-bottom: 1px solid #eaeaea !important;
+    padding: 12px 15px !important;
+    margin: 0 !important;
+    color: #333 !important;
+    font-size: 14px !important;
+}
+.acc_holder .accordion_content {
+    padding: 15px !important;
+    font-size: 13px !important;
+    color: #555 !important;
+    background: #fff !important;
+}
+
+/* Migas de Pan (Breadcrumbs) Modernas */
+.breadcrumb {
+    background: transparent !important;
+    border: none !important;
+    padding: 15px 0 !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+}
+.breadcrumb a {
+    color: #00a8e8 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding: 5px 10px !important;
+    background: rgba(0, 168, 232, 0.05) !important;
+    border-radius: 4px !important;
+    transition: 0.3s !important;
+}
+.breadcrumb a:hover {
+    background: #00a8e8 !important;
+    color: #fff !important;
+}
+.breadcrumb a.last_bc {
+    color: #666 !important;
+    background: transparent !important;
+}
+
+/* Títulos de Página */
+.page_heading h1 {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #111 !important;
+    border-bottom: 4px solid #00a8e8;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+}
 </style>
 </head>
 <body>
@@ -144,6 +278,12 @@
           </div>
           </li>
           <li><a href="contactanos.html">Contáctanos</a></li>
+          <li class="cart-menu-item">
+            <a href="#" id="openCartBtn" style="padding-right: 25px !important;" title="Ver Carrito">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" style="vertical-align: middle; margin-top: -3px;"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              <span class="cart-count-nav" id="cartCount">0</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -175,7 +315,7 @@
         <li class="four columns">
           <div class="pic"> <a><img src="images/productos/computadoradeoficina.jpg"/></a> </div>
           <p><br>
-            <a class="button sm_button button_hilite">S/. 1350.00</a> &nbsp;</p>
+            <a href="#" class="button sm_button button_hilite add-to-cart" data-name="PC Básica – Pentium 3.0 Ghz" data-price="1350.00">Comprar S/. 1350</a> &nbsp;</p>
           <h4><a>PC Básica – Pentium 3.0 Ghz, 4GB RAM, 500 GB HDD, Ideal Tareas de Oficina</a></h4>
           <div class="acc_holder">
             <div class="acc_item">
@@ -277,5 +417,122 @@ SUPERMULTI DVD LG BLACK OEM GH24NSB0 SATA, 2GB PCI EXPRESS GIGABYTE GEFORCE GT 7
   <!-- Footer::END --> 
   
 </div>
+
+<!-- Modales del Carrito -->
+<div class="custom-modal" id="cartModal">
+  <div class="custom-modal-content">
+    <span class="close-modal" id="closeCartBtn">&times;</span>
+    <h2 style="margin-bottom: 20px; font-weight:bold; color:#111;">Tu Carrito de Compras</h2>
+    <div id="cartItemsContainer"></div>
+    <div class="cart-total">Total: S/. <span id="cartTotal">0.00</span></div>
+    <button class="btn-yape" id="checkoutYapeBtn">Pagar con Yape</button>
+  </div>
+</div>
+
+<div class="custom-modal" id="yapeModal">
+  <div class="custom-modal-content" style="text-align: center;">
+    <span class="close-modal" id="closeYapeBtn">&times;</span>
+    <h2 style="color: #742284; font-weight:bold; margin-bottom: 10px;">Pago con Yape</h2>
+    <p style="color:#555;">Escanea el código QR o yapea al número:</p>
+    <h3 style="font-size: 26px; color: #111; margin: 10px 0;">976 956 368</h3>
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Yape" class="yape-qr">
+    </div>
+    <p style="margin-top: 10px; font-size: 14px; color: #666;">Una vez realizado el pago, envíanos la captura por WhatsApp para procesar tu pedido de inmediato.</p>
+    <button class="btn-yape btn-whatsapp" id="confirmWhatsAppBtn">Enviar comprobante al WhatsApp</button>
+  </div>
+</div>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('ztec_cart')) || [];
+
+  function saveCart() {
+    localStorage.setItem('ztec_cart', JSON.stringify(cart));
+    updateCartUI();
+  }
+
+  function updateCartUI() {
+    const cartCount = document.getElementById('cartCount');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const cartTotal = document.getElementById('cartTotal');
+
+    if(cartCount) cartCount.innerText = cart.length;
+
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = '<p style="color:#777;">Tu carrito está vacío.</p>';
+      cartTotal.innerText = '0.00';
+      document.getElementById('checkoutYapeBtn').style.display = 'none';
+      return;
+    }
+
+    document.getElementById('checkoutYapeBtn').style.display = 'block';
+    let html = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      html += `<div class="cart-item">
+                 <div class="cart-item-info">
+                   <span class="cart-item-title">${item.name}</span>
+                   <span class="cart-item-price">S/. ${parseFloat(item.price).toFixed(2)}</span>
+                 </div>
+                 <button class="cart-remove" onclick="removeFromCart(${index})">X</button>
+               </div>`;
+      total += parseFloat(item.price);
+    });
+
+    cartItemsContainer.innerHTML = html;
+    cartTotal.innerText = total.toFixed(2);
+  }
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    saveCart();
+    document.getElementById('cartModal').style.display = 'flex';
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartUI();
+
+    const cartModal = document.getElementById('cartModal');
+    const yapeModal = document.getElementById('yapeModal');
+    const openCartBtn = document.getElementById('openCartBtn');
+
+    if(openCartBtn) openCartBtn.addEventListener('click', (e) => { e.preventDefault(); cartModal.style.display = 'flex'; });
+    document.getElementById('closeCartBtn').addEventListener('click', () => cartModal.style.display = 'none');
+
+    document.getElementById('checkoutYapeBtn').addEventListener('click', () => {
+      cartModal.style.display = 'none';
+      yapeModal.style.display = 'flex';
+    });
+
+    document.getElementById('closeYapeBtn').addEventListener('click', () => yapeModal.style.display = 'none');
+
+    document.getElementById('confirmWhatsAppBtn').addEventListener('click', () => {
+      let orderText = "Hola Ztec, me gustaría realizar la compra de los siguientes productos y pagaré mediante Yape:%0A%0A";
+      let total = 0;
+      cart.forEach((item, i) => {
+         orderText += `${i + 1}. ${item.name} - S/. ${parseFloat(item.price).toFixed(2)}%0A`;
+         total += parseFloat(item.price);
+      });
+      orderText += `%0ATotal a Pagar: S/. ${total.toFixed(2)}%0A%0AAdjunto el comprobante de pago de Yape.`;
+      
+      window.open(`https://wa.me/51976956368?text=${orderText}`, '_blank');
+    });
+
+    document.body.addEventListener('click', function(e) {
+       if(e.target.classList.contains('add-to-cart')) {
+          e.preventDefault();
+          const name = e.target.getAttribute('data-name');
+          const price = e.target.getAttribute('data-price');
+          if(name && price) addToCart(name, price);
+       }
+    });
+  });
+</script>
 </body>
 </html>
