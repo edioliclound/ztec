@@ -1,55 +1,3 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
-<head>
-
-<!-- Basic Page Needs
-  ================================================== -->
-<meta charset="utf-8">
-<title>Ztec - Seguridad Electrónica. Cámaras de Seguridad, Alarmas Contra Robos, Controladores de Asistencia y Acceso, Sensores Magnéticos y de Movimiento. Cajamarca, Perú.</title>
-<meta name="description" content="Lo último en cámaras de seguridad y alarmas contra robo. Diseño de Páginas Web y Marketing Digital. Soporte Técnico de Computadoras.">
-<meta name="author" content="www.ztec.pe">
-
-<!-- Mobile Specific Metas
-  ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<!-- CSS
-  ================================================== -->
-<link rel="stylesheet" href="stylesheets/skeleton.css">
-<link rel="stylesheet" href="stylesheets/style.css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
-
-<!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="stylesheets/sequencejs-theme.sliding-horizontal-parallax-ie.css" /><![endif]-->
-
-<link rel="stylesheet" href="stylesheets/flexslider.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="stylesheets/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/carousel.css" type="text/css" media="screen" />
-
-<!-- JS
-  ================================================== -->
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/sequence.jquery-min.js"></script>
-<script type="text/javascript" src="js/jquery.quicksand.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-<script type="text/javascript" src="js/jquery.tipsy.js"></script>
-
-<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-<!-- Favicons
-	================================================== -->
-<link rel="shortcut icon" href="images/favicon.ico">
-<style>
 /* Barra de Navegación Celeste de Pantalla Completa */
 .container { overflow: visible !important; }
 .row.no_bm { clear: both !important; width: 100vw !important; max-width: 100vw !important; position: sticky !important; top: 0 !important; left: auto !important; margin: 0 calc(-50vw + 50%) 25px calc(-50vw + 50%) !important; transform: none !important; box-sizing: border-box !important; background: #00a8e8 !important; z-index: 9999 !important; border-radius: 0 !important; display: flex !important; justify-content: center !important; align-items: center !important; box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important; padding: 5px 30px !important; border: none !important; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
@@ -82,6 +30,23 @@
   #menu ul li > div::before { display: none !important; }
   #menu ul li:hover > div { display: block !important; opacity: 1; visibility: visible; }
 }
+
+/* Modales y Carrito Yape en Navbar */
+.cart-count-nav { position: absolute; top: 0px; right: 5px; background: #e74c3c; color: #fff; border-radius: 50%; padding: 2px 6px; font-size: 11px; font-weight: bold; line-height: 1; }
+.custom-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; }
+.custom-modal-content { background: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 450px; max-height: 85vh; overflow-y: auto; position: relative; font-family: 'Open Sans', sans-serif; text-align: left; }
+.close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa; transition: 0.3s; }
+.close-modal:hover { color: #333; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding: 12px 0; }
+.cart-item-title { font-weight: 600; color: #333; display: block; font-size: 14px; }
+.cart-item-price { color: #00a8e8; font-weight: bold; }
+.cart-remove { background: #e74c3c; color: #fff; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; font-weight: bold; }
+.cart-total { font-weight: 800; text-align: right; margin-top: 20px; font-size: 20px; color: #111; }
+.btn-yape { background: #742284; color: #fff; width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; transition: 0.3s; }
+.btn-yape:hover { background: #5a1a66; }
+.btn-whatsapp { background: #25d366; }
+.btn-whatsapp:hover { background: #1ebe57; }
+.yape-qr { max-width: 220px; border: 3px solid #742284; border-radius: 15px; padding: 10px; margin: 15px 0; }
 
 /* --- MODERNIZACIÓN GLOBAL DE ESTILOS --- */
 body { color: #444; line-height: 1.6; }
@@ -199,143 +164,3 @@ h1, h2, h3, h4, h5, h6 { color: #111; font-weight: 700; }
     padding-bottom: 8px;
     margin-bottom: 25px;
 }
-</style>
-</head>
-<body>
-<div id="wrapper">
-<div class="container">
-  <div class="header clearfix row" style="margin-top: 15px;">
-    <div class="four columns"> <a href="index.html"><img src="images/logo.jpg" title="ZTEC S.R.L."/></a> </div>
-    <div class="twelve columns" style="text-align: right; margin-top: 10px;"> <a href="seguridadelectronica.html"><img src="images/a_cabecera.jpg" title="Seguridad Electrónica"/></a> <a href="disenioweb.html"><img src="images/b_cabecera.jpg" title="Diseño Web & Marketing Digital"/></a> <a href="soportecomputadoras.html"><img src="images/c_cabecera.jpg" title="Soporte Técnico de Computadoras"/></a> </div>
-  </div>
-  
-  <!-- Main Navigation -->
-  <div class="row no_bm">
-    <div class="custom_menu sixteen columns">
-      <div id="menu">
-        <ul>
-          <li><a href="index.html"><span class="home_icon"></span></a></li>
-          <li><a href="nosotros.html">Nosotros<span></span></a></li>
-          <li><a href="#"><span>Productos</span></a>
-            <div>
-              <ul>
-                <li><a href="#" class="last_submenu_item"><span>Seguridad Electrónica</span></a>
-                  <div class='subsub_menu'>
-                    <ul>
-                      <li class=""><a href="camarasdeseguridad.html"><span>Cámaras de Seguridad</span></a></li>
-                        <li class=""><a href="alarmascontrarobos.html"><span>Alarmas Contra Robos</span></a></li>
-                        <li class=""><a href="controladoresdeasistencia.html"><span>Controladores de Asistencia y Acceso</span></a></li>
-                     
-                    </ul>
-                  </div>
-                </li>
-                <li><a href="#" class="last_submenu_item"><span>Equipos y Suministros Informáticos</span></a>
-                    <div class='subsub_menu'>
-                      <ul>
-                        <li class=""><a href="laptops.html"><span>Laptops</span></a></li>
-                      <li class="l"><a href="computadorasdeescritorio.html"><span>PCs de Escritorio</span></a></li>
-                      <li class=""><a href="redesyaccesoriosinformaticos.html"><span>Redes y Accesorios</span></a></li>
-                      <li class=""><a href="suministrosinformaticos.html"><span>Suministros Informáticos</span></a></li>
-                      </ul>
-                    </div>
-                  </li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">Servicios<span></span></a>
-            <div>
-              <ul>
-                <li><a href="seguridadelectronica.html"><span>Seguridad Electrónica</span></a></li>
-                <li><a href="soportecomputadoras.html"><span>Soporte Técnico de Computadoras</span></a></li>
-                <li><a href="disenioweb.html"><span>Diseño Web & Marketing Digital</span></a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">Noticias<span></span></a>
-          <div>
-              <ul>
-                <li><a href="http://elcomercio.pe/tecnologia?ref=portada_home&ft=menu_nav" target="_blank"><span>El Comercio Tecnología</span></a></li>
-                <li><a href="http://www.technologyreview.es/?lang=es"  target="_blank"><span>MIT Technology Review</span></a></li>
-                <li><a href="http://www.tynmagazine.com/"  target="_blank"><span>TYNMagazine</span></a></li>
-              </ul>
-          </div>
-          </li>
-          <li><a href="contactanos.html">Contáctanos</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- Main Navigation::END -->
-  
-  <div class="row">
-    <div class="sixteen columns clearfix">
-      <div class="breadcrumb"> <a href="index.html" class="first_bc"><span>Inicio</span></a> <a href="#" class="last_bc"><span>Servicios</span></a> <a href="laptops.html" class="last_bc"><span>Diseño Web & Marketing Digital</span></a> </div>
-      <div class="page_heading">
-        <h1>Diseño Web & Marketing Digital</h1>
-      </div>
-    </div>
-  </div>
-  <div class="clear"></div>
-  
-<div class="sixteen columns clearfix">
-<img src="images/diseniowebymarketingdigitalcajamarca1.jpg"/>
-     <div class="page_heading">
-        <h1></h1>
-      </div>
-
-</div>
-
-  
-  <div class="h20"></div>
-</div>
-
-<!-- Footer -->
-<div id="footer" class="container">
-  <div class="row footer_inside">
-    <div class="four columns">
-      <h3 class="margined_left">Visítanos</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.3629047205213!2d-78.518715!3d-7.157665661306594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b25af8c5a8c127%3A0x6f3cdb5af29d8960!2sZtec+S.R.L!5e0!3m2!1ses!2spe!4v1421934844957" width="200" height="150" frameborder="0" style="border:0"></iframe>
-    </div>
-    <div class="four columns">
-      <h3 class="margined_left">Socios Estratégicos</h3>
-      <ul class="margined_left">
-        <li><a href="http://store.intcomex.com/es-XPE/Home" target="_blank">Intcomex</a></li>
-          <li><a href="http://www.hikvision.com/Es/"  target="_blank">Hikvision</a></li>
-          <li><a href="http://www.satranet.com/satra/"  target="_blank">Satra</a></li>
-          <li><a href="http://www1.la.dell.com/content/default.aspx?c=pe&l=es&s=gen&~ck=cr"  target="_blank">Dell</a></li>
-      </ul>
-    </div>
-    <div class="four columns">
-      <h3>Noticias</h3>
-      <div class="footer_news_item clearfix">
-        <div class="footer_pic"> <a href=""><img src="images/footer_th1.jpg"/></a> </div>
-        <h4><a href="">Those who mind don't matter, and vice-versa.</a></h4>
-        <p class="date">8 Sept., 2012</p>
-      </div>
-      <div class="footer_news_item clearfix">
-        <div class="footer_pic"> <a href=""><img src="images/footer_th2.jpg"/></a> </div>
-        <h4><a href="">Be yourself; everyone else is already taken.</a></h4>
-        <p class="date">2 Sept., 2012</p>
-      </div>
-    </div>
-    <div class="four columns">
-      <h3>Contáctanos</h3>
-      <div class='icon_phone' title='Teléfono'>(076) 36 1384</div>
-      <div class='icon_phone' title='RPM'>#976956368 / #969050756</div>
-      <div class='icon_mail' title='Email'>informes@ztec.pe</div>
-      <div class='icon_loc' title='Location'>Jr. Cruz de Piedra N° 628, Cajamarca - Perú.</div>
-      <div class='clear'></div>
-      <div class='h10'></div>
-    </div>
-  </div>
-  <div class="clear"></div>
-  <div class="footer_btm">
-    <div class="footer_btm_inner"> <a href='http://www.twitter.com' target='_blank' class='icon_tweet' title='Tweeter'>Tweeter</a> <a href='http://www.google.com' target='_blank' class='icon_google' title='Google+'>Google+</a> <a href='http://www.facebook.com' target='_blank' class='icon_facebook' title='Facebook'>Facebook</a>
-      <div id="powered"><a href="http://www.ztec.pe/nosotros.html" target="_blank">Ztec S.R.L.</a> © 2015 &nbsp; | &nbsp; </div>
-    </div>
-  </div>
-  <!-- Footer::END --> 
-  
-</div>
-</body>
-</html>

@@ -49,40 +49,8 @@
 <!-- Favicons
 	================================================== -->
 <link rel="shortcut icon" href="images/favicon.ico">
-<style>
-/* Barra de Navegación Celeste de Pantalla Completa */
-.container { overflow: visible !important; }
-.row.no_bm { clear: both !important; width: 100vw !important; max-width: 100vw !important; position: sticky !important; top: 0 !important; left: auto !important; margin: 0 calc(-50vw + 50%) 25px calc(-50vw + 50%) !important; transform: none !important; box-sizing: border-box !important; background: #00a8e8 !important; z-index: 9999 !important; border-radius: 0 !important; display: flex !important; justify-content: center !important; align-items: center !important; box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important; padding: 5px 30px !important; border: none !important; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
-.row.no_bm::before { display: none !important; }
-.custom_menu.sixteen.columns { width: 100% !important; flex-grow: 1; max-width: 1100px !important; margin: 0 !important; padding: 0 !important; float: none !important; display: flex; justify-content: center; }
-#menu { background: transparent !important; box-shadow: none !important; border-radius: 0 !important; text-align: center; width: 100%; height: auto !important; margin: 0 !important; padding: 0 !important; }
-#menu > ul { display: flex !important; justify-content: center !important; align-items: center !important; padding: 0 !important; margin: 0 !important; width: auto; flex-wrap: wrap; gap: 5px; background: transparent !important; border-radius: 0 !important; box-shadow: none !important; }
-#menu > ul > li { display: block !important; float: none !important; background: transparent !important; padding: 0 !important; margin: 0 !important; height: auto !important; position: relative !important; }
-#menu > ul > li > a { background: transparent !important; color: #fff !important; text-shadow: none !important; font-weight: 700; font-size: 15px; padding: 10px 20px !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; display: block !important; border: none !important; line-height: 20px !important; text-transform: uppercase; letter-spacing: 0.5px; position: relative; border-radius: 30px !important; margin: 0 4px !important; overflow: hidden; }
-#menu > ul > li > a::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0, 168, 232, 0.2), transparent); transition: left 0.5s ease; z-index: 1; }
-#menu > ul > li:hover > a::before { left: 100%; }
-#menu > ul > li:hover > a { background: #0056b3 !important; color: #fff !important; box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4) !important; transform: translateY(-2px); text-shadow: 0 1px 3px rgba(0,0,0,0.2) !important; }
-#menu ul li > div { background: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important; border-radius: 12px !important; box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05) !important; border: none !important; padding: 15px 0 !important; top: 100% !important; margin-top: 5px !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); opacity: 0; visibility: hidden; transform: translateY(15px) scale(0.95); display: block !important; position: absolute; left: 50%; margin-left: -140px; min-width: 280px; text-align: left; transform-origin: top center; z-index: 999; }
-#menu ul li > div::before { content: ''; position: absolute; top: -6px; left: 50%; margin-left: -8px; width: 16px; height: 16px; background: #fff; transform: rotate(45deg); box-shadow: -2px -2px 4px rgba(0,0,0,0.03); border-top: 1px solid rgba(0,0,0,0.05); border-left: 1px solid rgba(0,0,0,0.05); z-index: -1; }
-#menu ul li:hover > div { opacity: 1; visibility: visible; transform: translateY(0) scale(1); z-index: 200; }
-#menu ul li > div ul li { background: transparent !important; border: none !important; display: block !important; width: 100% !important; margin: 0 !important; padding: 0 12px !important; position: relative; box-sizing: border-box; }
-#menu ul li > div ul li a { color: #444 !important; padding: 12px 18px !important; font-size: 14px !important; font-weight: 600 !important; text-transform: none !important; border-bottom: none !important; transition: all 0.3s ease !important; display: block !important; background: transparent !important; margin: 2px 0 !important; border-radius: 8px !important; }
-#menu ul li > div ul li a:hover { color: #0056b3 !important; background: #f0f4f8 !important; padding-left: 24px !important; }
-#menu ul li > div ul li > div { top: -15px !important; left: 100% !important; margin-left: 10px !important; margin-top: 0 !important; transform-origin: left top; }
-#menu ul li > div ul li > div::before { top: 20px; left: -6px; transform: rotate(-45deg); box-shadow: -2px 2px 4px rgba(0,0,0,0.03); border-top: none; border-bottom: 1px solid rgba(0,0,0,0.05); }
-@media (max-width: 768px) {
-  .row.no_bm { flex-direction: column !important; width: 100vw !important; max-width: 100vw !important; left: auto !important; margin: 0 calc(-50vw + 50%) 0 calc(-50vw + 50%) !important; padding: 15px 5vw !important; border-radius: 0 !important; position: relative !important; top: 0 !important; }
-  .header { display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 15px; }
-  .header .columns { width: 100% !important; margin-bottom: 10px; text-align: center !important; }
-  .custom_menu.sixteen.columns { width: 100% !important; justify-content: center !important; }
-  #menu > ul { justify-content: center !important; padding: 0 !important; }
-  #menu > ul > li > a::before { display: none !important; }
-  #menu > ul > li > a { padding: 12px 15px !important; font-size: 16px; }
-  #menu ul li > div { position: relative !important; transform: none !important; min-width: 100%; box-shadow: none !important; border-radius: 0 !important; border-left: 2px solid #00a8e8 !important; display: none !important; left: 0 !important; margin-left: 0 !important; }
-  #menu ul li > div::before { display: none !important; }
-  #menu ul li:hover > div { display: block !important; opacity: 1; visibility: visible; }
-}
-</style>
+<!-- Estilos Separados CSS -->
+<link rel="stylesheet" href="stylesheets/alarmascontrarobos.css">
 </head>
 <body>
 <div id="wrapper">
@@ -144,6 +112,12 @@
           </div>
           </li>
           <li><a href="contactanos.html">Contáctanos</a></li>
+          <li class="cart-menu-item">
+            <a href="#" id="openCartBtn" style="padding-right: 25px !important;" title="Ver Carrito">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" style="vertical-align: middle; margin-top: -3px;"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              <span class="cart-count-nav" id="cartCount">0</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -175,7 +149,7 @@
         <li class="four columns">
           <div class="pic"> <a><img src="images/productos/LH-D8001.jpg"/></a> </div>
           <p><br>
-            <a class="button sm_button button_hilite">S/. 590.00</a> &nbsp;</p>
+            <a href="#" class="button sm_button button_hilite add-to-cart" data-name="Kit De Alarma Inalámbrico" data-price="590.00">Comprar S/. 590</a> &nbsp;</p>
           <h4><a>Kit De Alarma Inalámbrico - Marca Longhorn</a></h4>
           <div class="acc_holder">
             <div class="acc_item">
@@ -345,5 +319,122 @@ Sirena Inalámbrica, Marca Longhorn
   <!-- Footer::END --> 
   
 </div>
+
+<!-- Modales del Carrito -->
+<div class="custom-modal" id="cartModal">
+  <div class="custom-modal-content">
+    <span class="close-modal" id="closeCartBtn">&times;</span>
+    <h2 style="margin-bottom: 20px; font-weight:bold; color:#111;">Tu Carrito de Compras</h2>
+    <div id="cartItemsContainer"></div>
+    <div class="cart-total">Total: S/. <span id="cartTotal">0.00</span></div>
+    <button class="btn-yape" id="checkoutYapeBtn">Pagar con Yape</button>
+  </div>
+</div>
+
+<div class="custom-modal" id="yapeModal">
+  <div class="custom-modal-content" style="text-align: center;">
+    <span class="close-modal" id="closeYapeBtn">&times;</span>
+    <h2 style="color: #742284; font-weight:bold; margin-bottom: 10px;">Pago con Yape</h2>
+    <p style="color:#555;">Escanea el código QR o yapea al número:</p>
+    <h3 style="font-size: 26px; color: #111; margin: 10px 0;">976 956 368</h3>
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Yape" class="yape-qr">
+    </div>
+    <p style="margin-top: 10px; font-size: 14px; color: #666;">Una vez realizado el pago, envíanos la captura por WhatsApp para procesar tu pedido de inmediato.</p>
+    <button class="btn-yape btn-whatsapp" id="confirmWhatsAppBtn">Enviar comprobante al WhatsApp</button>
+  </div>
+</div>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('ztec_cart')) || [];
+
+  function saveCart() {
+    localStorage.setItem('ztec_cart', JSON.stringify(cart));
+    updateCartUI();
+  }
+
+  function updateCartUI() {
+    const cartCount = document.getElementById('cartCount');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const cartTotal = document.getElementById('cartTotal');
+
+    if(cartCount) cartCount.innerText = cart.length;
+
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = '<p style="color:#777;">Tu carrito está vacío.</p>';
+      cartTotal.innerText = '0.00';
+      document.getElementById('checkoutYapeBtn').style.display = 'none';
+      return;
+    }
+
+    document.getElementById('checkoutYapeBtn').style.display = 'block';
+    let html = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      html += `<div class="cart-item">
+                 <div class="cart-item-info">
+                   <span class="cart-item-title">${item.name}</span>
+                   <span class="cart-item-price">S/. ${parseFloat(item.price).toFixed(2)}</span>
+                 </div>
+                 <button class="cart-remove" onclick="removeFromCart(${index})">X</button>
+               </div>`;
+      total += parseFloat(item.price);
+    });
+
+    cartItemsContainer.innerHTML = html;
+    cartTotal.innerText = total.toFixed(2);
+  }
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    saveCart();
+    document.getElementById('cartModal').style.display = 'flex';
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartUI();
+
+    const cartModal = document.getElementById('cartModal');
+    const yapeModal = document.getElementById('yapeModal');
+    const openCartBtn = document.getElementById('openCartBtn');
+
+    if(openCartBtn) openCartBtn.addEventListener('click', (e) => { e.preventDefault(); cartModal.style.display = 'flex'; });
+    document.getElementById('closeCartBtn').addEventListener('click', () => cartModal.style.display = 'none');
+
+    document.getElementById('checkoutYapeBtn').addEventListener('click', () => {
+      cartModal.style.display = 'none';
+      yapeModal.style.display = 'flex';
+    });
+
+    document.getElementById('closeYapeBtn').addEventListener('click', () => yapeModal.style.display = 'none');
+
+    document.getElementById('confirmWhatsAppBtn').addEventListener('click', () => {
+      let orderText = "Hola Ztec, me gustaría realizar la compra de los siguientes productos y pagaré mediante Yape:%0A%0A";
+      let total = 0;
+      cart.forEach((item, i) => {
+         orderText += `${i + 1}. ${item.name} - S/. ${parseFloat(item.price).toFixed(2)}%0A`;
+         total += parseFloat(item.price);
+      });
+      orderText += `%0ATotal a Pagar: S/. ${total.toFixed(2)}%0A%0AAdjunto el comprobante de pago de Yape.`;
+      
+      window.open(`https://wa.me/51976956368?text=${orderText}`, '_blank');
+    });
+
+    document.body.addEventListener('click', function(e) {
+       if(e.target.classList.contains('add-to-cart')) {
+          e.preventDefault();
+          const name = e.target.getAttribute('data-name');
+          const price = e.target.getAttribute('data-price');
+          if(name && price) addToCart(name, price);
+       }
+    });
+  });
+</script>
 </body>
 </html>
