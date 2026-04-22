@@ -59,6 +59,9 @@
 <body>
 <div id="wrapper">
   <div class="container">
+    <div style="text-align: right; padding-top: 5px;">
+       <a href="#" id="openLoginBtn" style="color: #ccc; font-size: 11px; text-decoration: none; font-family: 'Open Sans', sans-serif; transition: 0.3s;" onmouseover="this.style.color='#00a8e8'" onmouseout="this.style.color='#ccc'">🔒 Administración</a>
+    </div>
     <div class="header clearfix row" style="margin-top: 15px;">
       <div class="four columns"> <a href="index.html"><img src="images/logo.jpg" title="ZTEC S.R.L."/></a> </div>
       <div class="twelve columns" style="text-align: right; margin-top: 10px;"> <a href="seguridadelectronica.html"><img src="images/a_cabecera.jpg" title="Seguridad Electrónica"/></a> <a href="disenioweb.html"><img src="images/b_cabecera.jpg" title="Diseño Web & Marketing Digital"/></a> <a href="soportecomputadoras.html"><img src="images/c_cabecera.jpg" title="Soporte Técnico de Computadoras"/></a> </div>
@@ -502,6 +505,48 @@
     </svg>
   </button>
 </div>
+
+<!-- Modal de Login -->
+<div class="custom-modal" id="loginModal">
+  <div class="custom-modal-content" style="max-width: 320px; text-align: center;">
+    <span class="close-modal" id="closeLoginBtn">&times;</span>
+    <h2 style="margin-bottom: 20px; font-weight:bold; color:#111; font-size: 22px;">Acceso Ztec</h2>
+    <div style="text-align: left; margin-bottom: 15px;">
+      <label style="font-size: 12px; font-weight: bold; color: #555; display:block; margin-bottom: 5px;">Usuario</label>
+      <input type="text" id="loginUser" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;" placeholder="Ingresa tu usuario">
+    </div>
+    <div style="text-align: left; margin-bottom: 20px;">
+      <label style="font-size: 12px; font-weight: bold; color: #555; display:block; margin-bottom: 5px;">Contraseña</label>
+      <input type="password" id="loginPass" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;" placeholder="******">
+    </div>
+    <p id="loginError" style="color: #e74c3c; font-size: 13px; font-weight: bold; display: none; margin-bottom: 10px;">Credenciales incorrectas.</p>
+    <button class="button" id="submitLoginBtn" style="width: 100%; margin-top: 5px;">Ingresar al Panel</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+     const loginModal = document.getElementById('loginModal');
+     const openLoginBtn = document.getElementById('openLoginBtn');
+     const closeLoginBtn = document.getElementById('closeLoginBtn');
+     const submitLoginBtn = document.getElementById('submitLoginBtn');
+     
+     if(openLoginBtn) openLoginBtn.addEventListener('click', (e) => { e.preventDefault(); loginModal.style.display = 'flex'; document.getElementById('loginError').style.display = 'none'; });
+     if(closeLoginBtn) closeLoginBtn.addEventListener('click', () => loginModal.style.display = 'none');
+     
+     if(submitLoginBtn) submitLoginBtn.addEventListener('click', () => {
+        const user = document.getElementById('loginUser').value;
+        const pass = document.getElementById('loginPass').value;
+        
+        // Credenciales de prueba: Usuario: admin / Contraseña: ztec2026
+        if(user === 'admin' && pass === 'ztec2026') {
+            window.location.href = 'admin_productos.html';
+        } else {
+            document.getElementById('loginError').style.display = 'block';
+        }
+     });
+  });
+</script>
 
 <!-- Script de control del Chatbot -->
 <script src="chatbot/chatbot.js"></script>
