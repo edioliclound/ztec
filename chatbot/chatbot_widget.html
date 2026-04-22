@@ -1,0 +1,33 @@
+<!-- Chatbot Widget Visual -->
+<div id="chatbot-widget" class="chatbot-widget">
+  <div class="chatbot-header">
+    <span>Ztec IA Asistente</span>
+    <button id="close-chat" class="close-chat">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="message bot-message">¡Hola! Soy el asistente virtual de Ztec. ¿En qué te puedo ayudar hoy?</div>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." autocomplete="off" />
+    <button id="send-chat" class="send-chat" title="Enviar">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- Contenedor del Botón Flotante del Chatbot -->
+<div id="chat-btn-container" class="chat-btn-container">
+  <div class="chat-tooltip">Hola soy tu asistente</div>
+  <button id="open-chat-btn" class="open-chat-btn" title="Chatear con Inteligencia Artificial">
+    <!-- Icono de Robot-Cámara (Seguridad IA) -->
+    <svg class="robot-icon" viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="2" x2="12" y2="6"></line>
+      <circle cx="12" cy="2" r="1" fill="#0ad1e5" stroke="none" class="robot-antenna"></circle>
+      <rect x="4" y="6" width="16" height="11" rx="3" fill="rgba(255,255,255,0.1)"></rect>
+      <circle cx="12" cy="11.5" r="3.5"></circle>
+      <circle class="robot-lens" cx="12" cy="11.5" r="1.5" fill="#0ad1e5" stroke="none"></circle>
+      <path d="M8 17v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-1"></path>
+      <line x1="9" y1="23" x2="15" y2="23"></line>
+    </svg>
+  </button>
+</div>
