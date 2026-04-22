@@ -58,12 +58,19 @@
     body { background-color: #ffffff !important; overflow-x: hidden; }
     /* Ajustes de centrado y limpieza visual */
     .breadcrumb a, .breadcrumb a span { background: #ffffff !important; text-shadow: none !important; }
-    .page_heading h1 { background: #ffffff !important; }
+    .page_heading { text-align: center !important; float: none !important; clear: both !important; background: none !important; margin-bottom: 40px !important; }
+    .page_heading h1 { background: transparent !important; display: inline-block !important; float: none !important; padding: 0 25px !important; margin: 0 !important; font-weight: 800 !important; color: #111 !important; border-bottom: none !important; }
     #wrapper.full_wrapper { background-color: #ffffff !important; }
     
     /* Centrado de contenido útil */
     #wrapper.full_wrapper .container { max-width: 1200px !important; margin: 0 auto !important; float: none !important; display: block !important; }
     #wrapper.full_wrapper .row:not(.no_bm) { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+
+    /* Forzar las 4 imágenes en una sola línea horizontal (Desktop) */
+    .nosotros-static-images { display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 15px !important; justify-content: space-between !important; width: 100% !important; }
+    .nosotros-static-images .columns { float: none !important; width: auto !important; flex: 1 !important; margin: 0 !important; min-width: 0; }
+    .nosotros-card-custom { height: 280px !important; border-radius: 8px !important; box-shadow: 0 8px 20px rgba(0,0,0,0.05) !important; }
+    .nosotros-card-custom img { width: 100%; height: 100%; object-fit: cover; border: none !important; }
 
     /* Barra de Navegación Celeste (Pantalla Completa) */
     .container { overflow: visible !important; }
@@ -75,24 +82,32 @@
     }
 
     /* Efecto de Hover para las imágenes de Nosotros */
+    .nosotros-card-custom:hover img { transform: scale(1.1); }
     .nosotros-overlay {
         position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6);
-        display: flex; align-items: center; justify-content: center; padding: 0 15px; opacity: 0; transition: opacity 0.4s ease;
+        display: flex; align-items: center; justify-content: center; padding: 0 15px; opacity: 0; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
     .nosotros-card-custom:hover .nosotros-overlay, .nosotros-overlay.active { opacity: 1; }
     .nosotros-overlay h3 { color: #ffffff; text-align: center; font-size: 18px; font-weight: bold; margin: 0; }
 
-    /* Misión y Visión coincidan con Testimonios y cambien a blanco en hover */
-    .mz-card h2 { color: #333; font-weight: normal; }
-    .mz-card:hover h2 { color: #ffffff !important; }
+    /* Misión y Visión: Restauración de Hover */
+    .mz-card { 
+        background: #ffffff; padding: 30px; border: 1px solid #f0f0f0; border-radius: 4px; 
+        text-align: center; transition: all 0.3s ease; cursor: pointer; height: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    .mz-card:hover { background: #0bc9de !important; transform: translateY(-5px); }
+    .mz-card h2 { color: #333; font-weight: bold; transition: color 0.3s ease; margin-bottom: 15px; }
+    .mz-card p { color: #666; transition: color 0.3s ease; line-height: 1.6; margin: 0; }
+    .mz-card:hover h2, .mz-card:hover p { color: #ffffff !important; }
 
     @media (max-width: 768px) {
         #wrapper.full_wrapper .row.no_bm { 
             flex-direction: column !important; width: 100vw !important; left: auto !important; 
             margin: 0 calc(-50vw + 50%) 0 calc(-50vw + 50%) !important; padding: 15px 5vw !important; position: relative !important; top: 0 !important; 
         }
-        .nosotros-static-images { flex-wrap: wrap !important; }
-        .nosotros-static-images .columns { max-width: 100% !important; flex: 0 0 48% !important; }
+        /* En móviles permitimos que bajen de dos en dos para mantener la legibilidad */
+        .nosotros-static-images { flex-wrap: wrap !important; gap: 10px !important; }
+        .nosotros-static-images .columns { flex: 0 0 48% !important; }
     }
 </style>
 </head>
@@ -169,8 +184,8 @@
 			        <a href="nosotros.html" class="last_bc"><span>Nosotros</span></a>
 			    </div>
 			   
-		<div class="page_heading" style="text-align:center; margin-bottom: 5px;"><h1 style="color: #333;">Nosotros</h1></div>
-		<div class="row nosotros-hero" style="margin-bottom: 0; min-height: auto !important; padding-bottom: 0; padding-top: 0 !important;">
+		<div class="page_heading"><h1>Nosotros</h1></div>
+		<div class="row nosotros-hero" style="margin-bottom: 40px; min-height: auto !important; padding-bottom: 0; padding-top: 0 !important;">
             <div class="sixteen columns">
                 <div class="hero_text centered-text wide-text">
                     <p>ZTEC S.R.L es una empresa Cajamarquina especializada en la venta de productos de Seguridad Electrónica y Equipos y Accesorios Informáticos. Brindamos servicios de instalación de Cámaras de Seguridad, Alarmas Contra Robos, Soporte Técnico de Computadoras y Redes Informáticas.</p>
@@ -178,34 +193,34 @@
                 </div>
             </div>
             <div class="sixteen columns">
-                <div class="row nosotros-static-images" style="margin-bottom: 0; display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px;">
-                    <div class="four columns" style="flex: 1; max-width: 250px; margin: 0;">
+                <div class="row nosotros-static-images" style="margin-bottom: 0;">
+                    <div class="four columns">
                         <div class="nosotros-card-custom" style="position: relative; overflow: hidden; border-radius: 8px; height: 320px; margin-bottom: 0;">
-                            <img src="images/nosotros_camarasdeseguridadcajamarca.jpg" alt="Conocimiento y Experiencia" style="width: 100%; height: 100%; object-fit: cover; border: none;" />
+                            <img src="images/nosotros_camarasdeseguridadcajamarca.jpg" alt="Conocimiento y Experiencia" style="width: 100%; height: 100%; object-fit: cover; border: none; transition: transform 0.6s ease;" />
                             <div class="nosotros-overlay">
                                 <h3>Conocimiento y Experiencia</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="four columns" style="flex: 1; max-width: 250px; margin: 0;">
+                    <div class="four columns">
                         <div class="nosotros-card-custom" style="position: relative; overflow: hidden; border-radius: 8px; height: 320px; margin-bottom: 0;">
-                            <img src="images/nosotros_soportetecnicodecomputadorascajamarca.jpg" alt="Eficiencia y Velocidad" style="width: 100%; height: 100%; object-fit: cover; border: none;" />
+                            <img src="images/nosotros_soportetecnicodecomputadorascajamarca.jpg" alt="Eficiencia y Velocidad" style="width: 100%; height: 100%; object-fit: cover; border: none; transition: transform 0.6s ease;" />
                             <div class="nosotros-overlay">
                                 <h3>Eficiencia y Velocidad</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="four columns" style="flex: 1; max-width: 250px; margin: 0;">
+                    <div class="four columns">
                         <div class="nosotros-card-custom" style="position: relative; overflow: hidden; border-radius: 8px; height: 320px; margin-bottom: 0;">
-                            <img src="images/nosotros_tecnologiadeprimeracajamarca.jpg" alt="Tecnología de Vanguardia" style="width: 100%; height: 100%; object-fit: cover; border: none;" />
+                            <img src="images/nosotros_tecnologiadeprimeracajamarca.jpg" alt="Tecnología de Vanguardia" style="width: 100%; height: 100%; object-fit: cover; border: none; transition: transform 0.6s ease;" />
                             <div class="nosotros-overlay">
                                 <h3>Tecnología de Vanguardia</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="four columns" style="flex: 1; max-width: 250px; margin: 0;">
+                    <div class="four columns">
                         <div class="nosotros-card-custom" style="position: relative; overflow: hidden; border-radius: 8px; height: 320px; margin-bottom: 0;">
-                            <img src="images/slide1.jpg" alt="Seguridad Electrónica" style="width: 100%; height: 100%; object-fit: cover; border: none;" />
+                            <img src="images/slide1.png" alt="Seguridad Electrónica" style="width: 100%; height: 100%; object-fit: cover; border: none; transition: transform 0.6s ease;" />
                             <div class="nosotros-overlay">
                                 <h3>Seguridad Electrónica</h3>
                             </div>

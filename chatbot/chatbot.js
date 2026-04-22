@@ -83,14 +83,31 @@ function initChatbotLogic() {
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
     try {
+      // Creamos un controlador para poder cancelar la petición si tarda mucho
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 segundos de espera
+
       // Llama al servidor local de Flask
-      const response = await fetch('http://127.0.0.1:5000/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: text }) });
+      const response = await fetch('http://127.0.0.1:5000/chat', { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify({ message: text }),
+        signal: controller.signal
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) throw new Error(`Error del servidor: ${response.status}`);
+      
       const data = await response.json();
       document.getElementById(typingId).remove();
       appendMessage(data.response || 'Lo siento, no tengo respuesta en este momento.', 'bot');
     } catch (error) {
+      clearTimeout(timeoutId);
       document.getElementById(typingId).remove();
-      appendMessage('⚠️ No pude conectar. ¿Aseguraste que el archivo app.py está ejecutándose en la consola?', 'bot');
+      const errorMsg = error.name === 'AbortError' ? '⏳ El servidor tardó demasiado en responder.' : `⚠️ Error: ${error.message}`;
+      appendMessage(`${errorMsg}. Revisa la consola de Python.`, 'bot');
+      console.error('Detalle del error:', error);
     }
   }
 
